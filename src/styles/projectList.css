@@ -1,0 +1,146 @@
+.icn1 {
+    font-size: 20px;
+    width: 30px;
+    
+    cursor: pointer;
+}
+
+.icn2 {
+    font-size: 20px;
+    width: 30px;
+    cursor: pointer;
+}
+.icn3 {
+    font-size: 20px;
+    width: 30px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+tbody {
+    background-color: white;
+}
+
+tbody td {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    width: 150px;
+}
+
+thead th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 150px;
+}
+
+.priority-low {
+    color: rgb(70, 132, 70);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 50px;
+    width: 168px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.priority-medium {
+    color: rgb(247, 209, 17);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 50px;
+    width: 168px;
+    font-weight: bold;
+    gap: 10px;
+
+}
+
+.priority-high {
+    color: rgb(241, 88, 61);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    height: 50px;
+    width: 168px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.status-not-started {
+    background-color: #ffcccc;
+    /* Light red */
+    color: rgb(241, 88, 61);
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    margin-right: 5px;
+    /* Space between the status and the text */
+}
+
+.status-in-progress {
+    background-color: #f6f6b0;
+    /* Light yellow */
+    color: rgb(200, 173, 40);
+    ;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-completed {
+    background-color: #ccffcc;
+    /* Light green */
+    color: rgb(69, 181, 69);
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-on-hold {
+    background-color: #ccccff;
+    /* Light blue */
+    color: #7c7cfc;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-cancelled {
+    background-color: #ffccff;
+    /* Light pink */
+    color: #d631d6;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.details{
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+}
+.edit{
+    text-decoration: none;
+    color: rgb(58, 54, 54);
+}
+.pop{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.yes-no{
+    border-radius: 5px;
+    background-color: #648cf0;
+    color: white;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;   
+}

@@ -1,0 +1,200 @@
+.img {
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  /* This makes the image circular */
+  border: 2px solid #000;
+  cursor: pointer;
+  padding: 8px;
+
+}
+
+.search {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: 10px;
+  border: 4px;
+  background-color: #ebe2e2;
+  border-radius: 10px;
+  font-size: 20px;
+  height: 50px;
+}
+
+/* Add this to your CSS file */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  /* Adjust the color as needed */
+  margin-left: 10px;
+  /* Add some space between the image and the title */
+}
+
+.blue {
+  color: rgb(33, 33, 155);
+}
+
+.green {
+  color: green;
+}
+
+.pink {
+  color: #AE0994;
+}
+
+.close-button {
+  cursor: pointer;
+  /* Changes the cursor to a pointer when hovering over the image */
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  /* This makes the image circular */
+  border: 2px solid #000;
+  padding: 8px;
+}
+.sidebar-items{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+/* Styling for the sidebar links */
+.sidebar-item {
+  text-align: left;
+  display: block;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  background-color: #f8f9fa;
+  color: #475aea;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease; */
+
+}
+
+/* Hover effect for the sidebar links */
+.sidebar-item:hover {
+  background-color: #e9ecef;
+  /* Darker background color on hover */
+}
+
+.top-react-icons {
+  font-size: 20px;
+}
+
+.align-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #475aea;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #e6eef7;
+
+}
+
+.logout-button:hover {
+  background-color: #caddef;
+}
+
+/* //employees page */
+.employee-container {
+  display: grid;
+  grid-template-rows: 1fr, 1fr, 1fr;
+  gap: 20px;
+}
+
+.second-line {
+  display: flex;
+  justify-content: space-between;
+
+}
+.page-title{
+  margin-top: 40px;
+}
+.list-activity {
+  margin: auto;
+  border: 4px;
+  background: rgb(189, 203, 224);
+  border-radius: 10px;
+  padding: 10px 0px;
+  font-size: 20px;
+  
+}
+.span-list{
+  border: 4px;
+  background-color: rgb(88, 150, 243);
+  border-radius: 10px;
+  padding:10px 40px;
+  
+}
+.span-activity{
+  padding:10px 30px;
+  border: 4px;
+}
+
+.plus-icon {
+  color: var(--primary);
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.sub-container {
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  grid-template-columns: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* .add-icon{
+    margin-left: 0px;
+   } */
+.navbar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.701);
+  border-radius: 24px;
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.profileIcon {
+  color: #3F8CFF;
+}

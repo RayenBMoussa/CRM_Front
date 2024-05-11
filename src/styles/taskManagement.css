@@ -1,0 +1,66 @@
+.taskName-cont{
+    margin: auto;
+}
+.taskName{
+    margin-top: 60px;
+    font-size: 20px;
+}
+.management{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.start-btn{
+    font-size: 20px;
+    border: none;
+    padding: 5px 10px;
+    min-width: 80px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    color:white;
+    background-color: hsl(115, 100%, 40%);
+}
+.start-btn:hover{
+    background-color: hsl(115, 100%, 35%);
+}
+.save-btn{
+    font-size: 20px;
+    border: none;
+    padding: 5px 10px;
+    min-width: 80px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    color:white;
+    background-color: hsl(212, 88%, 65%);
+}
+.save-btn:hover{
+    background-color: hsl(212, 88%, 60%);
+}
+.stop-btn{
+    font-size: 20px;
+    border: none;
+    padding: 5px 10px;
+    min-width: 80px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    color:white;
+    background-color: var(--error);
+}
+.stop-btn:hover{
+    background-color: hsl(341, 83%, 40%);
+}
+.stopwatch-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.showtime{
+    font-size: 35px;
+}
+.button-container{
+    display: flex;
+    gap: 10px;
+}

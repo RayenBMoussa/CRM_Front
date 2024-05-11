@@ -1,0 +1,17 @@
+.action-icons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.details-icon{
+    font-size: 20px;
+    cursor:pointer;
+}
+.delete-icon{
+    font-size: 20px;
+    cursor:pointer;
+}
+.task-icon{
+    font-size: 20px;
+    cursor:pointer;
+}

@@ -1,0 +1,146 @@
+p,h5{
+    font-size: 18px;
+}
+
+.go-back{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.back{
+    text-decoration: none;
+    color: rgb(55, 100, 247);
+}
+.back-arrow{
+    font-size: 30px;
+    
+}
+.cont{
+    display: flex;
+    flex-direction: column;
+    
+}
+.details-cont{
+    margin: auto;
+}
+
+.sub-cont{
+    margin-top: 10px;
+    background-color:azure ;
+    width: 380px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:20px
+}
+.sub-cont h5{
+    margin: 0;
+    
+}
+.sub-cont p{
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+.assignees-flex{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.assignee1{
+    margin: 15px 0 0 0 ;
+}
+.low {
+    color: rgb(70, 132, 70);
+    display: flex;
+    align-items: center;
+    width: 100px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.medium {
+    color: rgb(247, 209, 17);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 100px;
+    font-weight: bold;
+    gap: 10px;
+
+}
+
+.high {
+    color: rgb(241, 88, 61);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    width: 100px;
+    font-weight: bold;
+    gap: 10px;
+}
+.not-started {
+    background-color: #ffcccc;
+    /* Light red */
+    color: rgb(241, 88, 61);
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    
+    /* Space between the status and the text */
+}
+
+.in-progress {
+    background-color: #f6f6b0;
+    /* Light yellow */
+    color: rgb(200, 173, 40);
+    ;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    
+}
+
+.completed {
+    background-color: #ccffcc;
+    /* Light green */
+    color: rgb(69, 181, 69);
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    
+}
+
+.on-hold {
+    background-color: #ccccff;
+    /* Light blue */
+    color: #7c7cfc;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+    
+}
+
+.cancelled {
+    background-color: #ffccff;
+    /* Light pink */
+    color: #d631d6;
+    font-weight: bold;
+    border-radius: 10px;
+    display: inline-block;
+}
+.status-priority{
+    display: flex;
+}
+.date{
+    display: flex;
+    justify-content: space-between;
+}
+.creation-date{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.calendar{
+    color: grey;
+}

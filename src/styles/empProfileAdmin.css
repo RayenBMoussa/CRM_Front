@@ -1,0 +1,138 @@
+/* Container for the entire page */
+.page-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Section for uploading user image */
+.image-upload-section {
+    width: 20%;
+    /* Adjust based on your layout */
+    padding: 20px;
+    max-height: 400px;
+}
+.user-man{
+    width:300px ;
+    height: 300px;
+}
+.user-woman{
+    width:270px ;
+    height: 270px;
+}
+
+/* Main content section */
+.main-content {
+    width: 50%;
+    /* Adjust based on your layout */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: aliceblue;
+}
+
+
+.employee-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* Form fields */
+.employee-profile-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.employee-profile-form input {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+
+}.employee-profile-form select{
+    background-color: white;
+}
+
+
+.line1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.line2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.line3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.line3-1 {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.line4{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.line5{
+    display: flex;
+    justify-content: flex-end;
+}
+.save{
+    margin-right: 10px;
+}
+.dropdown {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* background-color: #f0f0f0; */
+    appearance: none;
+    -webkit-appearance: none;
+    /* For Chrome and Safari */
+    -moz-appearance: none;
+    /* For Firefox */
+    background: transparent;
+    /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    /* Add a custom arrow */
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    /* Position the custom arrow */
+    background-position-y: 50%;
+    padding-right: 20px;
+    /* Make space for the custom arrow */
+  
+  
+  }
+
+
+
+/* Buttons */
+.employee-profile-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.employee-profile-form button:hover {
+    background-color: #0056b3;
+}
