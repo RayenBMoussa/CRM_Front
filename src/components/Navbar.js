@@ -44,17 +44,17 @@ const Navbar = () => {
               <span className='sidebar-title'><span className='blue'>Acm </span><span className='green'>Mar</span><span className='pink'>keting</span></span>
             </div>
             <div className='sidebar-tags'>
-            <Link to="/adminDashboard" className="sidebar-item" onClick={toggleSidebar}>
+            <Link to="/adminAccount" className="sidebar-item" onClick={toggleSidebar}>
               <div className='align-icon' >
                 <IconContext.Provider value={{ className: "top-react-icons" }}><MdDashboard /></IconContext.Provider>Dashboard
               </div>
             </Link>
-            <Link to="/adminDashboard/projects" className="sidebar-item" onClick={toggleSidebar}>
+            <Link to="/adminAccount/projects" className="sidebar-item" onClick={toggleSidebar}>
               <div className='align-icon'>
                 <IconContext.Provider value={{ className: "top-react-icons" }}><ImBooks /></IconContext.Provider>Projects
               </div>
             </Link>
-            <Link to="/adminDashboard/employees" className="sidebar-item" onClick={toggleSidebar}>
+            <Link to="/adminAccount/employees" className="sidebar-item" onClick={toggleSidebar}>
               <div className='align-icon'>
                 <IconContext.Provider value={{ className: "top-react-icons" }}><IoMdPeople /></IconContext.Provider>Employees
               </div>

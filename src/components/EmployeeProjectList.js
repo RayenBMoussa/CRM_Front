@@ -40,24 +40,24 @@ const EmployeeProjectList = ({ project }) => {
                 <td >
 
                     <div className="action-icons">
-                    
-                        <IconContext.Provider value={{className:"details-icon",title:"details"}}>
-                        
-                        <TbListDetails />
-                        
+
+                        <IconContext.Provider value={{ className: "details-icon", title: "details" }}>
+
+                            <TbListDetails />
+
                         </IconContext.Provider>
-                        <Link to={`/employeeAccount/tasks/${project._id}`}>
-                        <IconContext.Provider value={{className:"task-icon"}}>
-                        <GrTask/>
-                        </IconContext.Provider>
+                        <Link className="task-link" to={`/employeeAccount/tasks/${project._id}`}>
+                            <IconContext.Provider value={{ className: "task-icon" }}>
+                                <GrTask />
+                            </IconContext.Provider>
                         </Link>
-                        <IconContext.Provider value={{className:"delete-icon" }}>
-                        <MdDelete  />
+                        <IconContext.Provider value={{ className: "delete-icon" }}>
+                            <MdDelete />
                         </IconContext.Provider>
-                       
-                       </div>
+
+                    </div>
                 </td>
-                
+
             </tr>
         </>
     );

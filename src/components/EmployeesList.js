@@ -25,7 +25,7 @@ const EmployeesList = ({ employee }) => {
     return (
 
         <div className="employee-card">
-            <Link className="emp-profile" to={`/adminDashboard/employee-profile/${employee._id}`}>
+            <Link className="emp-profile" to={`/adminAccount/employee-profile/${employee._id}`}>
                 <div className="card-upper">
                     <div className="icon">
                         {employee.gender.toLowerCase() === 'male' ? (

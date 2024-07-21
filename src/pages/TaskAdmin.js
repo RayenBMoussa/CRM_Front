@@ -8,7 +8,7 @@ const TaskAdmin = () => {
     const { user } = useAuthContext()
     const admin = user?.userType === "admin";
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(6);
+    const [itemsPerPage, setItemsPerPage] = useState(5);
     const [filters, setFilters] = useState({ taskStatus: "", priority: "", startDate: "" });
     const [isFilterOverlayOpen, setIsFilterOverlayOpen] = useState(false);
     useEffect(() => {

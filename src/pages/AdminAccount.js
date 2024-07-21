@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 
 
-const AdminDashboard = () => {
+const AdminAccount = () => {
     const router = useNavigate()
     const { user} = useAuthContext()
     useEffect(() => {
@@ -13,11 +13,11 @@ const AdminDashboard = () => {
     }, [user])
     return (
 
-        <div>
+        <div className="pages">
             <Navbar />
             <Outlet />
         </div>
     );
 }
 
-export default AdminDashboard;
+export default AdminAccount;

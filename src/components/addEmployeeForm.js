@@ -9,7 +9,7 @@ import { useEmployeesContext } from "../hooks/useEmployeesContext";
 import "../styles/registrationForm.css"
 import emailjs from '@emailjs/browser';
 
-const AddEmployeeForm = ({ open, handleClose }) => {
+const AddEmployeeForm = ({ open, handleClose,onUserAdded }) => {
     const { dispatch } = useEmployeesContext()
     const [fullName, setfullName] = useState("");
     const [email, setEmail] = useState("");
@@ -21,7 +21,7 @@ const AddEmployeeForm = ({ open, handleClose }) => {
     const [birthday_date, setBirthday_date] = useState("");
     const [error, setError] = useState(null);
     const [showAlert, setShowAlert] = useState(false);
- 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         // const isoDateString = birthday_date ? birthday_date.toISOString() : null;
@@ -38,17 +38,17 @@ const AddEmployeeForm = ({ open, handleClose }) => {
         const sendEmail = () => {
             emailjs.send('service_jjn0qre', "template_rhopfzs", {
                 to_name: fullName,
-                message: `I hope you are having a good day, here is your password for our CRM application ${ password} `,
+                message: `I hope you are having a good day, here is your password for our CRM application  ${password} `,
                 subject: "Employee account",
                 to_email: email,
             }, 'vc4dNF6JlEHb94drI')
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            }, (err) => {
-                console.error('FAILED...', err);
-            });
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                }, (err) => {
+                    console.error('FAILED...', err);
+                });
         };
-        
+
         const token = JSON.parse(localStorage.getItem('token'));
         const response = await fetch("/api/Acm_CRM/addEmployee", {
             method: "POST",
@@ -66,19 +66,12 @@ const AddEmployeeForm = ({ open, handleClose }) => {
             dispatch({ type: 'CREATE_EMPLOYEES', payload: json.user })
             sendEmail()
             resetForm();
-            setShowAlert(true);
+            handleClose();
+            onUserAdded()
+
         }
     };
-    useEffect(() => {
-        if (showAlert) {
-            const timer = setTimeout(() => {
-                setShowAlert(false);
-                handleClose(); // Close the modal
-            }, 3000); // Alert will be shown for 3 seconds
-
-            return () => clearTimeout(timer); // Cleanup on component unmount
-        }
-    }, [showAlert, handleClose]);
+    
 
 
     const selectRegion = (val) => {
@@ -155,6 +148,7 @@ const AddEmployeeForm = ({ open, handleClose }) => {
                             <label>date of birth</label>
                             <input
                                 type="date"
+                                //test age>20
                                 onChange={(e) => setBirthday_date(e.target.value)}
                                 placeholder="date of birth"
                                 value={birthday_date}
@@ -185,7 +179,7 @@ const AddEmployeeForm = ({ open, handleClose }) => {
                                         checked={gender === "Female"}
                                     />
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
@@ -238,14 +232,11 @@ const AddEmployeeForm = ({ open, handleClose }) => {
                     <button>Create Account</button>
                     {error && <div className="error">{error}</div>}
                 </form>
-                {showAlert && (
-                    <div className="alert">
-                        User added successfully!
-                    </div>
-                )}
+               
             </div>
 
         </Modal>
+        
     );
 };
 

@@ -200,6 +200,7 @@ const AddNewTask = ({ open, handleClose }) => {
                             <label>Estimation</label>
                             <input
                                 type="number"
+                                min="1"
                                 onChange={(e) => setEstimation(e.target.value)}
                                 placeholder="How many days"
                                 value={estimation}

@@ -1,66 +1,231 @@
-.taskName-cont{
-    margin: auto;
+.big-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
 }
-.taskName{
+
+.taskName-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+
+}
+
+.icn-back {
+    color: #3F8CFF;
+
+}
+
+.link-tasks {
+    text-decoration: none;
+}
+
+.back {
+    color: #3F8CFF;
+}
+
+.taskName {
     margin-top: 60px;
     font-size: 20px;
 }
-.management{
+
+.management {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
 }
-.start-btn{
-    font-size: 20px;
+
+.start-btn {
+    font-size: 15px;
     border: none;
     padding: 5px 10px;
     min-width: 80px;
     border-radius: 7px;
     font-weight: bold;
     cursor: pointer;
-    color:white;
+    color: white;
     background-color: hsl(115, 100%, 40%);
 }
-.start-btn:hover{
+
+.start-btn:hover {
     background-color: hsl(115, 100%, 35%);
 }
-.save-btn{
-    font-size: 20px;
+
+.save-btn {
+    font-size: 15px;
     border: none;
     padding: 5px 10px;
     min-width: 80px;
     border-radius: 7px;
     font-weight: bold;
     cursor: pointer;
-    color:white;
+    color: white;
     background-color: hsl(212, 88%, 65%);
 }
-.save-btn:hover{
+
+.save-btn:hover {
     background-color: hsl(212, 88%, 60%);
 }
-.stop-btn{
-    font-size: 20px;
+
+.stop-btn {
+    font-size: 15px;
     border: none;
     padding: 5px 10px;
     min-width: 80px;
     border-radius: 7px;
     font-weight: bold;
     cursor: pointer;
-    color:white;
+    color: white;
     background-color: var(--error);
 }
-.stop-btn:hover{
+
+.stop-btn:hover {
     background-color: hsl(341, 83%, 40%);
 }
-.stopwatch-container{
+
+.stopwatch-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: fit-content;
+    background-color: rgb(234, 252, 252);
+    padding: 30px 50px;
+    border-radius: 10px;
 }
-.showtime{
+
+.showtime {
     font-size: 35px;
+    display: flex;
+    justify-content: center;
 }
-.button-container{
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.icn-timer {
+    width: 30px;
+    height: 30px;
+    color: rgb(178, 199, 16);
+
+    font-weight: bold;
+}
+
+.timer-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.task-prog {
+    display: flex;
+
+    gap: 30px;
+    background-color: rgb(234, 252, 252);
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 65%;
+    height: fit-content;
+
+}
+
+.tasks-description {
+    line-height: 25px;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow: auto;
+    margin-bottom: 0;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+
+}
+
+.task-progress {
+    margin-top: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+.progress-task {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+}
+
+.submit-progress {
+    background: var(--primary);
+    border: 0;
+    color: #fff;
+    padding: 10px;
+    font-family: "Poppins";
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    align-self: end;
+}
+
+.form-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tracking {
     display: flex;
     gap: 10px;
+    align-items: center;
+}
+
+.another-one {
+    display: flex;
+}
+
+.calen {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    justify-content: space-between;
+}
+
+.prog {
+
+    padding: 20px;
+}
+
+.progress-list {
+    line-height: 30px;
+    height: 400px;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 10px;
+
 }

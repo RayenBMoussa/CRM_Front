@@ -5,13 +5,18 @@
 }
 .details-icon{
     font-size: 20px;
-    cursor:pointer;
+    color: gray;
 }
 .delete-icon{
     font-size: 20px;
-    cursor:pointer;
+    color: gray;
 }
 .task-icon{
     font-size: 20px;
     cursor:pointer;
+
+}
+.task-link{
+    text-decoration: none;
+    color: black;
 }

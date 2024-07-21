@@ -39,16 +39,14 @@ const EmployeeTaskList = ({ task }) => {
                 <td >
 
                     <div className="action-icons">
-                    <Link to={`/employeeAccount/Management/${task._id}`}>
-                        <IconContext.Provider value={{className:"details-icon",title:"details"}}>
+                    <Link className="task-link" to={`/employeeAccount/Management/${task._id}`}>
+                        <IconContext.Provider value={{className:"task-icon",title:"details"}}>
                         
                         <TbListDetails />
                         
                         </IconContext.Provider>
                         </Link>
-                        <IconContext.Provider value={{className:"task-icon"}}>
-                        <GrTask/>
-                        </IconContext.Provider>
+                        
                         <IconContext.Provider value={{className:"delete-icon" }}>
                         <MdDelete  />
                         </IconContext.Provider>

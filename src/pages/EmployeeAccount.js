@@ -12,7 +12,7 @@ const EmployeeAccount = () => {
 
     }, [user])
     return (
-        <div className="">
+        <div className="pages">
             <NavbarEmployee/>
             <Outlet />
         </div>

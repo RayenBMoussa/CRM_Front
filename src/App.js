@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Login from './pages/Login';
-import AdminDashboard from './pages/AdminDashboard';
+import AdminDashboard from './pages/AdminAccount';
 import Navbar from './components/Navbar';
 import Employees from './pages/Employees';
 import { EmployeesContextProvider } from './context/EmployeesContext';
@@ -18,8 +18,16 @@ import ProjectsEmployee from './pages/ProjectsEmployee';
 import EditTask from './components/EditTask';
 import EmployeeTasks from './components/EmployeeTasks';
 import TaskManagement from './components/TaskManagement';
+import EmployeeTaskList from './components/EmployeeTaskList';
+import AdminDash from './pages/AdminDash';
+import TaskAdmin from './pages/TaskAdmin';
+import AdminAccount from './pages/AdminAccount';
 function App() {
   const { user, loading } = useAuthContext()
+  useEffect(() => {
+    console.log(user);
+    console.log(loading);
+  }, [loading, user])
   if (loading) return (
     <div className="">
       Loading...
@@ -33,29 +41,34 @@ function App() {
         <EmployeesContextProvider>
           <ProjectsContextProvider>
             <TasksContextProvider>
-              <div className="pages">
+              <div className="">
                 <Routes>
-                  <Route path="/login"
-                    element={user?.userType === "admin" ? <Navigate to="/adminDashboard" /> : user?.userType === "employee" ? <Navigate to="/employeeAccount" /> : <Login />}
+                  <Route path="/"
+                    element={user?.userType === "admin" ? <Navigate to="/adminAccount" /> : user?.userType === "employee" ? <Navigate to="/employeeAccount" /> : <Login />}
                   />
-                  <Route path='/adminDashboard' element={user?.userType === "admin" ? <AdminDashboard /> : <Navigate to="/login" />}>
-                    <Route path='' element={<h3>Admin's Dashboard</h3>} />
+                  <Route path="/login"
+                    element={user?.userType === "admin" ? <Navigate to="/adminAccount" /> : user?.userType === "employee" ? <Navigate to="/employeeAccount" /> : <Login />}
+                  />
+                  <Route path='/adminAccount' element={user?.userType === "admin" ? <AdminAccount /> : <Navigate to="/login" />}>
+                    <Route path='' element={<AdminDash />} />
                     <Route path='employees' element={<Employees />} />
                     <Route path='projects' element={<ProjectsAdmin />} />
+                    <Route path='tasks' element={<TaskAdmin />} />
                     <Route path='employee-profile/:id' element={<EmployeeProfileAdmin />} />
                     <Route path='edit-project/:id' element={<EditProject />} />
-                    <Route path='EditTask/:id' element={<EditTask/>} />
+                    <Route path='EditTask/:id' element={<EditTask />} />
                   </Route>
 
                   <Route path={"/employeeAccount"} element={user?.userType === "employee" ? <EmployeeAccount /> : <Navigate to="/login" />} >
                     <Route path="" element={<EmployeeDashboard />} />
                     <Route path='Profile' element={<EmployeeOwnProfile />} />
                     <Route path="projects" element={<ProjectsEmployee />} />
-                    <Route path='tasks/:id' element={<EmployeeTasks/>}/>
-                    <Route path='management/:id' element={<TaskManagement/>}/>
-                    
+                    <Route path='tasks/:id' element={<EmployeeTasks />} />
+
+                    <Route path='management/:id' element={<TaskManagement />} />
+
                   </Route>
-                  <Route path="*" element={<div>Not Found</div>} />
+                  <Route path="*" element={<div className='pages'>Not Found</div>} />
                 </Routes>
               </div>
             </TasksContextProvider>

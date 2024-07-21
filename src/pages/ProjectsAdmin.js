@@ -45,7 +45,7 @@ const ProjectsAdmin = () => {
         if (admin) {
             fetchProjects()
         }
-       
+
     }, [dispatch, admin])
     // const totalPages = projects && projects.length > 0 ? Math.ceil(projects.length / itemsPerPage) : 1;
 
@@ -95,46 +95,34 @@ const ProjectsAdmin = () => {
             <div className="second-container">
                 {selectedSection === 'projects' ? (
                     <>
-                        <div className="filter">
-                            <button className="filter-btn" onClick={openCloseFilter}>
-                                Filter
-                            </button>
+                        <div className="filter-tasks" >
 
-                            {isFilterOverlayOpen && (
-                                <div className="filter-overlay">
-                                    <div className="filter-overlay-content">
-                                        <h3>Filter Projects</h3>
-                                        <div className="filter-item">
-                                            <label htmlFor="status-filter">Status:</label>
-                                            <select id="status-filter" value={filters.projectStatus} onChange={(e) => setFilters({ ...filters, projectStatus: e.target.value })}>
-                                                <option value="">All</option>
-                                                <option value="Not Started">Not Started</option>
-                                                <option value="On Hold">On Hold</option>
-                                                <option value="Completed">Completed</option>
-                                                <option value="In Progress">In Progress</option>
-                                                <option value="Cancelled">Cancelled</option>
-                                            </select>
-                                        </div>
-                                        <div className="filter-item">
-                                            <label htmlFor="priority-filter">Priority:</label>
-                                            <select id="priority-filter" value={filters.priority} onChange={(e) => setFilters({ ...filters, priority: e.target.value })}>
-                                                <option value="">All</option>
-                                                <option value="low">Low</option>
-                                                <option value="medium">Medium</option>
-                                                <option value="high">High</option>
-                                            </select>
-                                        </div>
-                                        <div className="filter-item">
-                                            <label htmlFor="start-date-filter">Start Date:</label>
-                                            <input type="date" id="start-date-filter" value={filters.startDate} onChange={(e) => setFilters({ ...filters, startDate: e.target.value })} />
-                                        </div>
+                            <div className="filter-item">
+                                <label htmlFor="status-filter">Status:</label>
+                                <select id="status-filter" value={filters.projectStatus} onChange={(e) => setFilters({ ...filters, projectStatus: e.target.value })} className="task-item">
+                                    <option value="">All</option>
+                                    <option value="Not Started">Not Started</option>
+                                    <option value="On Hold">On Hold</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Cancelled">Cancelled</option>
+                                </select>
+                            </div>
+                            <div className="filter-item">
+                                <label htmlFor="priority-filter">Priority:</label>
+                                <select id="priority-filter" value={filters.priority} onChange={(e) => setFilters({ ...filters, priority: e.target.value })} className="task-item">
+                                    <option value="">All</option>
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                            <div className="filter-item">
+                                <label htmlFor="start-date-filter">Start Date:</label>
+                                <input type="date" id="start-date-filter" value={filters.startDate} onChange={(e) => setFilters({ ...filters, startDate: e.target.value })} className="task-date" />
+                            </div>
 
-                                        <button className="save-btn" onClick={() => setIsFilterOverlayOpen(false)}>
-                                            Save
-                                        </button>
-                                    </div>
-                                </div>
-                            )}
+
                         </div>
                         <AddNewProject open={open} handleClose={handleClose} />
                         <div style={{

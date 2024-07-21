@@ -15,6 +15,7 @@ const EditTask = () => {
     const [project, setProject] = useState("")
     const [error, setError] = useState(null)
     const [users, setUsers] = useState([]);
+    const [successMessage, setSuccessMessage] = useState('');
     const [isEditMode, setIsEditMode] = useState(false);
     const token = JSON.parse(localStorage.getItem('token'));
     const { dispatch } = useTasksContext()
@@ -73,12 +74,20 @@ const EditTask = () => {
         });
         const json = await response.json();
         if (!response.ok) {
+
             setError(json.error);
+
+
         }
 
         if (response.ok) {
             dispatch({ type: 'UPDATE_TASK', payload: json.task })
             setIsEditMode(false)
+            setError(null)
+            setSuccessMessage("Updated successfully")
+            setTimeout(() => {
+                setSuccessMessage('');
+            }, 4000);
         }
     };
     const [projects, setProjects] = useState([]);
@@ -264,6 +273,7 @@ const EditTask = () => {
                         <button type="button" onClick={handleUpdate}>Update</button>
                     )}
                 </div>
+                {successMessage && <div className="success">{successMessage}</div>}
                 {error && <div className="error">{error}</div>}
             </form>
 

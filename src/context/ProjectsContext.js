@@ -10,12 +10,12 @@ export const ProjectsReducer = (state, action) => {
         case "UPDATE_PROJECT":
             return {
                 projects: state.projects.map(project =>
-                    project._id === action.payload._id? action.payload : project
+                    project._id === action.payload?._id ? action.payload : project
                 )
             };
         case 'DELETE_PROJECT':
             return {
-                projects: state.projects.filter((project) => project._id !== action.payload._id)
+                projects: state.projects.filter((project) => project._id !== action.payload?._id)
             }
         default:
             return state

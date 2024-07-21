@@ -25,6 +25,7 @@ export const AuthContextProvider = ({ children }) => {
                 });
 
                 const user = await res.json();
+                
                 dispatch({ type: 'LOGIN', payload: user })
             }
             

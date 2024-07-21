@@ -16,6 +16,7 @@ const EditProject = () => {
     const [deadline, setDeadline] = useState("")
     const [assignees, setAssignees] = useState([])
     const [isEditMode, setIsEditMode] = useState(false);
+    const [successMessage, setSuccessMessage] = useState('');
     const token = JSON.parse(localStorage.getItem('token'));
     const { dispatch } = useProjectsContext()
     useEffect(() => {
@@ -29,7 +30,7 @@ const EditProject = () => {
             if (response.ok) {
                 const startDateFormatted = new Date(projectData.startDate).toISOString().split('T')[0];
                 const deadlineFormatted = new Date(projectData.deadline).toISOString().split('T')[0];
-                // Assuming the project data is directly returned
+
                 setTitle(projectData.title);
                 setDescription(projectData.description);
                 setProjectStatus(projectData.projectStatus);
@@ -75,8 +76,12 @@ const EditProject = () => {
         }
 
         if (response.ok) {
-            dispatch({ type: 'UPDATE_PROJECT', payload: json.project })
+            dispatch({ type: 'UPDATE_PROJECT', payload: json?.project })
             setIsEditMode(false)
+            setSuccessMessage("Updated successfully")
+            setTimeout(() => {
+                setSuccessMessage('');
+            }, 4000);
         }
     };
     const toggleEditMode = () => {
@@ -225,7 +230,10 @@ const EditProject = () => {
                     ) : (
                         <button type="button" onClick={handleUpdate}>Update</button>
                     )}
+
                 </div>
+                {successMessage && <div className="success">{successMessage}</div>}
+                {error && <div className="error">{error}</div>}
             </form>
         </div>
     );

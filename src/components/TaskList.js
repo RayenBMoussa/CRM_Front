@@ -62,7 +62,7 @@ const TaskList = ({ task }) => {
             <tr>
                 <td>{task.taskName}</td>
                 <td>{formatDate(task.startDate)}</td>
-                <td>{`${task.estimation}d`}</td>
+                <td>{`${task.estimation}h`}</td>
                 <td>
                     <span className={task.taskStatus === "Not Started" ? "status-not-started" :
                         task.taskStatus === "In Progress" ? "status-in-progress" :
@@ -82,7 +82,7 @@ const TaskList = ({ task }) => {
                     {task.priority}
                 </td>
                 <td>
-                    <Link className="details" to={`/adminDashboard/EditTask/${task._id}`}>
+                    <Link className="details" to={`/adminAccount/EditTask/${task._id}`}>
                         <IconContext.Provider value={{ className: "icn3" }}>
                             <TbListDetails/>
                         </IconContext.Provider>

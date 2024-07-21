@@ -81,7 +81,7 @@ const ProjectsList = ({ project }) => {
                     {project.priority}
                 </td>
                 <td>
-                    <Link className="details" to={`/adminDashboard/edit-project/${project._id}`}>
+                    <Link className="details" to={`/adminAccount/edit-project/${project._id}`}>
                         <IconContext.Provider value={{ className: "icn3" }}>
                             <TbListDetails/>
                         </IconContext.Provider>
